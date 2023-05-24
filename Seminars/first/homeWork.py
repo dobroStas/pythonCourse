@@ -67,9 +67,9 @@
 # прямой между дольками (то есть разломить шоколадку на два
 # прямоугольника).
 
-# n = int(input('enter size the chocolate: '))
-# m = int(input())
-# k = int(input('enter piece size: '))
+n = int(input('enter size the chocolate: '))
+m = int(input())
+k = int(input('enter piece size: '))
 
-# if k % m == 0 or k % n == 0: print('YES')
-# else: print('NO')
+if (k % m == 0 and k >= m) or (k % n == 0 and k >= n): print('YES')
+else: print('NO')

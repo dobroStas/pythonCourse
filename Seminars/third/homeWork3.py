@@ -13,19 +13,20 @@
 
 
 
-# from random import randint
-# myList = []
-# a = int(input('input quantity elements: '))
-# i = 0
-# for i in range(a):
-#     myList.append(randint(0, 10))
-# x = int(input('input number: '))
-# count = 0
-# for item in myList :
-#     if x == item :
-#         count += 1 
-# print(*myList)
-# print('-> ',count)
+from random import randint
+myList = []
+a = int(input('input quantity elements: '))
+i = 0
+for i in range(a):
+    myList.append(randint(0, 10))
+print(myList)
+x = int(input('input number: '))
+count = 0
+for item in myList :
+    if x == item :
+        count += 1 
+print(*myList)
+print('-> ',count)
 
 
 
@@ -100,30 +101,41 @@
 # Вывод:
 # 12
 
-list_eng = {1:'AEIOULNSTR', 2:'DG', 3:'BCMP',
-                4:'FHVWY', 5:"K" , 8:'JX', 10:'QZ'}
-list_rus = {1:'АВЕИНОРСТ', 2:'ДКЛМПУ', 3:'БГЁЬЯ',
-                4:'ЙЫ', 5:'ЖЗХЦЧ', 8:'ШЭЮ', 10:'ФШЪ'}
+# list_eng = {1:'AEIOULNSTR', 2:'DG', 3:'BCMP',
+#                 4:'FHVWY', 5:"K" , 8:'JX', 10:'QZ'}
+# list_rus = {1:'АВЕИНОРСТ', 2:'ДКЛМПУ', 3:'БГЁЬЯ',
+#                 4:'ЙЫ', 5:'ЖЗХЦЧ', 8:'ШЭЮ', 10:'ФШЪ'}
 
-word = input('input word: ')
+# word = input('input word: ')
 
-if word[0].upper() in str(list_eng.values()):
-    summa = 0
-    for i in range(len(word)):
-            for key, value in list_eng.items():
-                if word[i].upper() in value:
-                    summa += key
-    print(summa)
-else: 
-    if word[0].upper() in str(list_rus.values()):
-        summa = 0
-        for i in range(len(word)):
-            for key, value in list_rus.items():
-                if word[i].upper() in value:
-                    summa += key
-        print(summa)
-
-
+# if word[0].upper() in str(list_eng.values()):
+#     summa = 0
+#     for i in range(len(word)):
+#             for key, value in list_eng.items():
+#                 if word[i].upper() in value:
+#                     summa += key
+#     print(summa)
+# else: 
+#     if word[0].upper() in str(list_rus.values()):
+#         summa = 0
+#         for i in range(len(word)):
+#             for key, value in list_rus.items():
+#                 if word[i].upper() in value:
+#                     summa += key
+#         print(summa)
 
 
+# ==============================================================================================
 
+# text = input('input text: ').upper()
+# res = 0
+# for letter in text :
+#     if letter in eng.keys():
+#         res += int(eng[letter])
+#     elif letter in rus.keys() :
+#         res += int(rus[letter])
+# print(res)
+
+# rus - словарь анг букв
+# eng - словарь рус букв
+# где буквы - ключи

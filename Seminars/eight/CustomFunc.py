@@ -1,6 +1,5 @@
 import os
 
-
 def show_contacts(file_name) :
     os.system('CLS')
     with open(file_name, 'r') as file:
@@ -37,9 +36,9 @@ def find_contact(file_name) :
     input('press any kay')
 
 def change_contact(file_name) :                                             #метод изменения(удаляем старое, добавдяем новое)
-    os.system('CLS')
-    target = input('Input name of contact: ')
-    res = ''
+    os.system('CLS')                                                           # можно менять строку через replace!!! 
+    target = input('Input name of contact: ')                                   # можно перезаписать без учета данных, но это больше к deleted
+    res = ''                                                                    # contact.replace("name", "name2")
     with open(file_name, 'r') as file:                      # открыл для чтения. нашел и заменил элемент
         contacts = file.readlines()
         for contact in contacts:
@@ -59,13 +58,11 @@ def change_contact(file_name) :                                             #м�
         for contact in contacts:
             if not target in contact :
                 file.write(contact)
-                
-        file.write('\n' + contact_str)
+            else :   
+                file.write(contact_str + '\n')
       
 
     input('press any kay')
-
-        
     
 def deleted_contact(file_name) :
     os.system('CLS')
@@ -77,19 +74,6 @@ def deleted_contact(file_name) :
         for contact in contacts:
             if not delet in contact :
                 file.write(contact)
-                
-    
-      
-        # print(contacts, file=file_name)
-                
-    
-        
-            
-            
-
-    
-    
-
 
 def drawing():
         print('1 - show contacts')
@@ -118,10 +102,8 @@ def main(file_name) :
             print('have a nice day!')
             return
 
-
-
 main('test.txt')
 
         
-# show_contacts("test.txt")
+
 

@@ -1,0 +1,4 @@
+ivn a 0
+mvn f 7
+kvn d 4
+jvn c 2
